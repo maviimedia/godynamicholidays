@@ -1,0 +1,121 @@
+godynamicholidays/
+    .env.local
+    .gitignore
+    .oxlintrc.json
+    README.md
+    index.html
+    package-lock.json
+    package.json
+    vite.config.js
+    convex/
+        files.js
+        leads.js
+        schema.js
+        trips.js
+        _generated/
+            api.d.ts
+            api.js
+            dataModel.d.ts
+            server.d.ts
+            server.js
+    public/
+        favicon.svg
+        icons.svg
+        Switzerland-Italy-to-Mount-Titlis/
+            Switzerland Italy to Mount Titlis-1.avif
+            Switzerland Italy to Mount Titlis-2.avif
+            Switzerland Italy to Mount Titlis-3.avif
+            Switzerland Italy to Mount Titlis-4.avif
+            Switzerland Italy to Mount Titlis-Main.avif
+        assets/
+            icons/
+                Adventure.svg
+                Attractions.svg
+                Bali.svg
+                Couple.svg
+                Deals.svg
+                Dubai.svg
+                Europe.svg
+                Family Trip.svg
+                Featured.svg
+                Group.svg
+                Honeymoon.svg
+                Japan.svg
+                Ladakh.svg
+                Luxury.svg
+                North-East.svg
+                Singapore.svg
+                SpitiValley.svg
+                Switzerland.svg
+                Thailand.svg
+                USA.svg
+                Water Sport.svg
+            images/
+                Abu_Dhabi_logo.avif
+                CTA Image.avif
+                Dubai_logo.avif
+                France_logo.avif
+                GDH Logo (Header).png
+                GDH Logo (Header2).png
+                GDH-Slider 1.png
+                GDH-Slider 2.png
+                GDH-Slider 3.png
+                GDH-Slider 4.png
+                GDH-Slider 5.png
+                GDH-Slider-Mobile 1.png
+                GDH-Slider-Mobile 2.png
+                GDH-Slider-Mobile 3.png
+                GDH-Slider-Mobile 4.png
+                GDH-Slider-Mobile 5.png
+                Go Dynamic Holiday Siteicon.svg
+                Japan_logo.avif
+                Jordan_logo.avif
+                Leh Ladakh.avif
+                Spiti Valley.avif
+                Switzerland.avif
+                andaman.avif
+                bali.avif
+                dubai.avif
+                hongkong.avif
+                india.avif
+                ladakh.avif
+                saudi_logo.avif
+                singapore.avif
+                singapore_logo.avif
+                srilanka.avif
+                thailand.avif
+                visit-sweden-logo.avif
+    src/
+        App.css
+        App.jsx
+        index.css
+        main.jsx
+        assets/
+            hero.png
+            react.svg
+            vite.svg
+        components/
+            admin/
+                AdminLayout.jsx
+            layout/
+                DestinationNav.jsx
+                Footer.jsx
+                Navbar.jsx
+                PolicyLayout.jsx
+            ui/
+                PopupForm.jsx
+        pages/
+            About.jsx
+            Destination.jsx
+            Home.jsx
+            NotFound.jsx
+            PrivacyPolicy.jsx
+            RefundPolicy.jsx
+            TermsConditions.jsx
+            TripDetails.jsx
+            admin/
+                CreatePackage.jsx
+                Dashboard.jsx
+                EditPackage.jsx
+                Leads.jsx
+                Packages.jsx
