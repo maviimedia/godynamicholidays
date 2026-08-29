@@ -70,7 +70,7 @@ export default function Home() {
         </script>
       </Helmet>
       
-      <section className="py-1 bg-white">
+      <section className="py-0 bg-white">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-10">
           <div className="flex justify-between items-center flex-wrap gap-2 mb-6">
             <h2 className="text-2xl font-semibold text-gray-800">Tour <span className="text-orange-500">Packages ✨</span></h2>

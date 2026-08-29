@@ -69,7 +69,7 @@ export default function TripDetails() {
         <title>{trip.title} | GoDynamicHolidays</title>
       </Helmet>
 
-      <section className="py-8">
+      <section className="py-0">
         <div className="max-w-[1100px] mx-auto px-4 sm:px-10">
           <div className="flex flex-col md:flex-row gap-4">
             <div 

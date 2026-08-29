@@ -5,8 +5,15 @@ import { api } from "../../../convex/_generated/api";
 export default function PopupForm() {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState("");
+  const [dateInputType, setDateInputType] = useState("text");
   const [formData, setFormData] = useState({
-    fullName: "", email: "", phone: "", countryCode: "+91", travelDate: "", travellerCount: "", message: ""
+    fullName: "",
+    email: "",
+    phone: "",
+    countryCode: "+91",
+    travelDate: "",
+    travellerCount: "",
+    message: ""
   });
 
   useEffect(() => {
@@ -42,17 +49,17 @@ export default function PopupForm() {
 
   return (
     <div className="fixed inset-0 z-[1000] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg p-6 max-w-[400px] w-full relative shadow-2xl animate-fade-in-down">
-        <button onClick={() => setIsOpen(false)} className="absolute top-3 right-4 text-gray-400 hover:text-gray-800 text-2xl">&times;</button>
-        <h2 className="text-xl font-semibold mb-2">Save up to <span className="text-orange-500">50% OFF</span></h2>
-        <p className="text-sm text-gray-600 mb-4">We'll be needing some of your basic details to help you better with your trip</p>
+      <div className="bg-white rounded-lg p-5 sm:p-6 max-w-[400px] w-full relative shadow-2xl animate-fade-in-down max-h-[90vh] overflow-y-auto">
+        <button onClick={() => setIsOpen(false)} className="absolute top-2 right-3 sm:top-3 sm:right-4 text-gray-400 hover:text-gray-800 text-2xl">&times;</button>
+        <h2 className="text-lg sm:text-xl font-semibold mb-2 mt-2 sm:mt-0">Save up to <span className="text-orange-500">50% OFF</span></h2>
+        <p className="text-xs sm:text-sm text-gray-600 mb-4">We'll be needing some of your basic details to help you better with your trip</p>
         
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name*" required className="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none" />
           <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" className="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none" />
           
           <div className="flex gap-2">
-            <select name="countryCode" value={formData.countryCode} onChange={handleChange} className="w-[80px] px-2 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none bg-white">
+            <select name="countryCode" value={formData.countryCode} onChange={handleChange} className="w-[70px] sm:w-[80px] px-1 sm:px-2 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none bg-white">
               <option value="+91">+91</option>
               <option value="+1">+1</option>
               <option value="+44">+44</option>
@@ -60,9 +67,20 @@ export default function PopupForm() {
             <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number*" required className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none" />
           </div>
 
-          <div className="flex gap-2">
-            <input type="date" name="travelDate" value={formData.travelDate} onChange={handleChange} className="w-1/2 px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none text-gray-500" />
-            <input type="number" name="travellerCount" value={formData.travellerCount} onChange={handleChange} placeholder="People" className="w-1/2 px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
+            <input 
+              type={dateInputType} 
+              name="travelDate" 
+              value={formData.travelDate} 
+              onChange={handleChange} 
+              onFocus={() => setDateInputType("date")}
+              onBlur={() => {
+                if (!formData.travelDate) setDateInputType("text");
+              }}
+              placeholder="Travel Date"
+              className="w-full sm:w-1/2 px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none text-gray-700 bg-white" 
+            />
+            <input type="number" name="travellerCount" value={formData.travellerCount} onChange={handleChange} placeholder="People" className="w-full sm:w-1/2 px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none" />
           </div>
 
           <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Where Are You Traveling?" className="w-full px-3 py-2 border border-gray-300 rounded text-sm focus:border-orange-500 outline-none min-h-[80px]"></textarea>
