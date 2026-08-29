@@ -33,8 +33,41 @@ export default function Home() {
   return (
     <main className="w-full">
       <Helmet>
-        <title>GoDynamicHolidays - India's #1 Travel Company</title>
-        <meta name="description" content="Explore customized travel packages, bespoke itineraries, and group tours with GoDynamicHolidays. Book your dream vacation today." />
+        <title>GoDynamicHolidays | Custom Tour Packages & Itineraries</title>
+        <meta name="description" content="Book customized travel packages, bespoke itineraries, and group tours with GoDynamicHolidays. Expert travel agency in India for Dubai, Europe, Bali, and more." />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <link rel="canonical" href="https://godynamicholidays.com/" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://godynamicholidays.com/" />
+        <meta property="og:title" content="GoDynamicHolidays | Custom Tour Packages & Itineraries" />
+        <meta property="og:description" content="Book customized travel packages, bespoke itineraries, and group tours with GoDynamicHolidays. Expert travel agency in India." />
+        <meta property="og:image" content="https://godynamicholidays.com/assets/images/GDH%20Logo%20(Header2).png" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="GoDynamicHolidays | Custom Tour Packages" />
+        <meta name="twitter:description" content="Expert travel agency for bespoke itineraries and global group tours." />
+        <meta name="twitter:image" content="https://godynamicholidays.com/assets/images/GDH%20Logo%20(Header2).png" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "GoDynamicHolidays",
+            "url": "https://godynamicholidays.com",
+            "logo": "https://godynamicholidays.com/assets/images/GDH%20Logo%20(Header2).png",
+            "description": "Premium travel agency offering customized tour packages, group tours, and bespoke itineraries.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9820402089",
+              "contactType": "customer service"
+            }
+          })}
+        </script>
       </Helmet>
       
       <section className="py-1 bg-white">
